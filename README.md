@@ -1,6 +1,6 @@
 ## Objectives
 
-  1. Understand the conceot of AR Lifecycle methods
+  1. Understand the concept of AR Lifecycle methods
   2. Use `before_save`, `before_create`, and `before_validation`
   3. Understand when to use `before_validation` vs. `before_save`
 
@@ -119,4 +119,4 @@ Before you move on, let's cover one last callback that is super useful. This one
 
 For more information on all of the callback available to you, check out [this amazing rails guide](http://guides.rubyonrails.org/active_record_callbacks.html)
 
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/activerecord-lifecycle-reading' title='Objectives'>Objectives</a> on Learn.co and start learning to code for free.</p>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/activerecord-lifecycle-reading'>ActiveRecord Lifecycle Methods</a> on Learn.co and start learning to code for free.</p>
