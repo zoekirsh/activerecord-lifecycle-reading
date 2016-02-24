@@ -13,7 +13,7 @@ Take a look at the blog app that is included. It's pretty simple. We have a `Pos
 While this validation is great, there is a method provided by Rails called `#titlecase` that will do this for us. I still want this validation, but let's make it so that just automatically before we save the record it runs `#titlecase`. What a convenience we are providing to our users! We are going to use our first callback, `before_save`. We use this similar to how you use `has_many` or `validates`. They are at the top of your model files. First let's write our method to actually run the `#titlecase` method.
 
 ```ruby
-# posts.rb
+# post.rb
 
   def make_title_case
     self.title = self.title.titlecase
