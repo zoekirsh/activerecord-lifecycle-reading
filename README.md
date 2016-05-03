@@ -54,7 +54,7 @@ p = Post.create(title: "testing")
 # => #<Post id: nil, title: "testing", description: nil, created_at: nil, updated_at: nil, post_status: nil, author_id: nil>
 ```
 
-Wait! There was no `INSERT` SQL command issued. In fact, we see the `rollback transaction` line. That means that it didn't actually save to the database. If we do `p.valid?` right now it will return `false`. That's not right. We automatically title case things. The validation should pass! Then after reading much documentation, it turns out that the `before_save` is called **after** validation occurs. So it Rails goes `is valid?` Nope! Stop!. It never makes it to `before_save`. Let's change our callback to the `before_validation` callback. This one happens **before** validation. That means that first our `before_validation` code works, which title cases the title, *then* the validation runs, which passes! Here is the final code:
+Wait! There was no `INSERT` SQL command issued. In fact, we see the `rollback transaction` line. That means that it didn't actually save to the database. If we do `p.valid?` right now it will return `false`. That's not right. We automatically title case things. The validation should pass! Then after reading much documentation, it turns out that the `before_save` is called **after** validation occurs. So Rails goes `is valid?` "Nope! Stop!", and never makes it to `before_save`. Let's change our callback to the `before_validation` callback. This one happens **before** validation. That means that first our `before_validation` code works, which title cases the title, *then* the validation runs, which passes! Here is the final code:
 
 ```ruby
 class Post < ActiveRecord::Base
@@ -120,3 +120,5 @@ Before you move on, let's cover one last callback that is super useful. This one
 For more information on all of the callback available to you, check out [this amazing rails guide](http://guides.rubyonrails.org/active_record_callbacks.html)
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/activerecord-lifecycle-reading'>ActiveRecord Lifecycle Methods</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/activerecord-lifecycle-reading'>ActiveRecord Lifecycle Methods</a> on Learn.co and start learning to code for free.</p>
