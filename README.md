@@ -6,19 +6,17 @@
 
 ## Callbacks
 
-Now that you are integrating ActiveRecord into Rails, we must first have a
-quick discussion about how developers can control the "lifecycle" of our
-object. This means that it can be nice to inject our code every time
-ActiveRecord does something to our model. There are a ton of different places
-we can inject our code. In this reading we are going to discuss the most common
-ones. Before we begin, some quick terminology. Everything we cover here is
-called "Active Record Lifecycle Callbacks". Many people just call them
-callbacks. It's a bit shorter.
+Now that you are integrating `ActiveRecord` into Rails, we must should note that
+we can make bits of code run whenever something happens in our model: like when
+it's created (but not yet saved to the database), saved to the database, or
+even deleted.  Everything we cover here is called "Active Record Lifecycle
+Callbacks". Many people just call them callbacks. It's a bit shorter.
 
-Take a look at the blog app that is included. It's pretty simple. We have a
-`Post` model and a few views. The `Post` `belongs_to` an `Author`. Also in the
-`Post` model you'll notice a validation to make sure that post titles are in
-title case. Title case means every word starts with a capital letter.
+Take a look at the blog app that is included. 
+before you start learning from Rails! We have a `Post` model and a few views.
+The `Post` `belongs_to` an `Author`. Also in the `Post` model you'll notice a
+validation to make sure that post titles are in title case. Title case means
+every word starts with a capital letter.
 
 While this validation is great, there is a method provided by Rails called
 `#titlecase` that will do this for us. I still want this validation, but let's
