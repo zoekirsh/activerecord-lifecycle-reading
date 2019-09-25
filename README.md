@@ -12,11 +12,11 @@ it's created (but not yet saved to the database), saved to the database, or
 even deleted.  Everything we cover here is called "Active Record Lifecycle
 Callbacks". Many people just call them callbacks. It's a bit shorter.
 
-Take a look at the blog app that is included. 
-before you start learning from Rails! We have a `Post` model and a few views.
-The `Post` `belongs_to` an `Author`. Also in the `Post` model you'll notice a
-validation to make sure that post titles are in title case. Title case means
-every word starts with a capital letter.
+Take a look at the blog app that is included. Be sure to run the migrations
+before you start learning from Rails (we do this with `rake db:migrate`)! We
+have a `Post` model and a few views.  The `Post` `belongs_to` an `Author`. Also
+in the `Post` model you'll notice a validation to make sure that post titles
+are in title case. Title case means every word starts with a capital letter.
 
 While this validation is great, there is a method provided by Rails called
 `#titlecase` that will do this for us. I still want this validation, but let's
