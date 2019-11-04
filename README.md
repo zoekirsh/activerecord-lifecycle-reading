@@ -177,4 +177,4 @@ amazing rails guide][callbacks]
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/activerecord-lifecycle-reading'>ActiveRecord Lifecycle Methods</a> on Learn.co and start learning to code for free.</p>
 
-[callbacks]: http://guides.rubyonrails.org/active_record_callbacks.html.
+[callbacks]: http://guides.rubyonrails.org/active_record_callbacks.html
