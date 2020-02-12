@@ -21,7 +21,7 @@ that post titles are in title case. Title case means every word starts with a
 capital letter.
 
 So, in order to make sure that our validation always passes, before every save,
-we want to Rails to run our title-case algorithm on the `title` of the `Post`.
+we want Rails to run our title-case algorithm on the `title` of the `Post`.
 Let's create the `make_title_case` method then.
 
 ```ruby
