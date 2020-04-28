@@ -9,8 +9,8 @@
 Now that we are integrating `ActiveRecord` into Rails, we should note that
 we can make bits of code run whenever something happens in our model: like when
 it's created (but not yet saved to the database), saved to the database, or
-even deleted.  Everything we cover here is called "Active Record Lifecycle
-Callbacks". Many people just call them callbacks. It's a bit shorter.
+even deleted.  Everything we cover here is called an "Active Record Lifecycle
+Callback". Many people just call them callbacks. It's a bit shorter.
 
 Take a look at the blog app that is included. Be sure to run the migrations
 before you start learning from Rails (we do this with `rake db:migrate`)! We
