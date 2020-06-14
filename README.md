@@ -174,7 +174,6 @@ This means not every time the object is persisted, just when it is **new**.
 For more information on all of the callbacks available to you, check out [this
 amazing rails guide][callbacks]
 
-
 <p class='util--hide'>View <a href='https://learn.co/lessons/activerecord-lifecycle-reading'>ActiveRecord Lifecycle Methods</a> on Learn.co and start learning to code for free.</p>
 
 [callbacks]: http://guides.rubyonrails.org/active_record_callbacks.html
