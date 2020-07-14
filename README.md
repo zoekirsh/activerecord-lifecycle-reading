@@ -1,3 +1,5 @@
+# The Active Record Lifecycle
+
 ## Objectives
 
 1. Understand the concept of AR Lifecycle methods
